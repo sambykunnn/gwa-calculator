@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GWA Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-2">GWA Calculator</h1>
+            <p class="text-gray-600">Calculate your Grade Weighted Average with ease</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Input Section -->
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                            <i class="fas fa-pencil-alt text-indigo-500"></i> Enter Your Grades
+                        </h2>
+
+                        <div id="gradeInputs" class="space-y-4 max-h-96 overflow-y-auto pr-2"></div>
+
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <button onclick="addGradeField()" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition">
+                                <i class="fas fa-plus"></i> Add Course
+                            </button>
+                            <button onclick="resetCalculator()" class="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                            <button onclick="calculateGWA()" class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition ml-auto">
+                                <i class="fas fa-calculator"></i> Calculate GWA
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Result Section -->
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                            <i class="fas fa-chart-line text-indigo-500"></i> Results
+                        </h2>
+
+                        <div id="resultContainer" class="bg-gray-50 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center">
+                            <div class="text-center text-gray-500">
+                                <i class="fas fa-calculator text-4xl mb-3 opacity-50"></i>
+                                <p>Your GWA will appear here</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h3 class="font-medium text-gray-700 mb-2">GWA Scale</h3>
+                            <div class="bg-indigo-50 rounded-lg p-4">
+                                <table class="w-full">
+                                    <thead class="text-left text-sm text-indigo-700">
+                                        <tr>
+                                            <th class="pb-2">Grade</th>
+                                            <th class="pb-2">Equivalent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-sm text-gray-700">
+                                        <tr><td class="py-1">1.00</td><td class="py-1">Excellent</td></tr>
+                                        <tr><td class="py-1">1.25</td><td class="py-1">Very Good</td></tr>
+                                        <tr><td class="py-1">1.50</td><td class="py-1">Good</td></tr>
+                                        <tr><td class="py-1">1.75</td><td class="py-1">Satisfactory</td></tr>
+                                        <tr><td class="py-1">2.00 - 3.00</td><td class="py-1">Passing</td></tr>
+                                        <tr><td class="py-1">5.00</td><td class="py-1">Failed</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>Note: This calculator follows the standard GWA computation used in most universities.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
