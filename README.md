@@ -25,4 +25,4 @@ To use this calculator locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/GWA-Calculator.git
+   git clone https://github.com/sambykunnn/GWA-Calculator.git
