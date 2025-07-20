@@ -6,7 +6,7 @@ A simple GWA (General Weighted Average) calculator built with **HTML**, **CSS**,
 
 ## 📸 Demo
 
-> 🔗 [Live Preview]([#](https://sambykunnn.github.io/gwa-calculator/)) – *Add your GitHub Pages or hosted link here*
+> 🔗 [Live Preview](https://sambykunnn.github.io/gwa-calculator/)
 
 ---
 
